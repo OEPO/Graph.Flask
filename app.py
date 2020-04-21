@@ -9,8 +9,17 @@ app= Flask(__name__,static_url_path='/static')
 
 app.config['SECRET_KEY'] = '64fa09145bd39641bbc316d33c351458'   #Proteccion contra ataques por cookies,etc.
 #token HEX(16) generado con la libreria secrets
+@app.route("/")
+def pload():
+     return render_template("pre-load.html")
+     
 
-@app.route("/",methods=['GET','POST'])
+
+
+
+
+
+@app.route("/home",methods=['GET','POST'])
 def home():
     
     form = NodesClass()
