@@ -13,6 +13,15 @@ flask_wtf
 networkX
 matplotlib
 ```
+##Mejoras a implementar
+
+Ingreso de distintos tipos de grafos.
+mostrar el camino mas corto.
+diseño pagina grafos.html
+boton info-1
+etiqueta para los nodos
+que muestre el peso de los vertices
+...
 
 ## Problemas
 
