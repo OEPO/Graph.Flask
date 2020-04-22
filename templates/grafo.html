@@ -2,6 +2,15 @@
     {%block content%}
 
 <div id=img>
+    <!-- Soluciona temporalmente la NO carga de nuevas imagenes cuando retrocedes -->
+    <script>
+        window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+} 
+    </script>
     <h1>Se genero un grafo Direccional</h1>
 
     <img src={{url}} alt="grafos" height=600px width=800px >
