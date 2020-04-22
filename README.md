@@ -26,5 +26,6 @@ que muestre el peso de los vertices
 
 ## Problemas
 
-Al recargar la pagina muestra la imagen generada anteriormente, se debe recargar la pagina.(solucionado temporalmente con un script)
+Al recargar la pagina muestra la imagen generada anteriormente, se debe recargar la pagina.
+(solucionado temporalmente con un script)
 
