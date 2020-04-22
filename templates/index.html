@@ -15,8 +15,9 @@
     <div id="info2">
         <div class="jumbotron">
             <h1><strong>COMO USAR</strong></h1>
-            <p id="text-info">Para agregar un Grafo simplemente selecciona el numero de nodos que deseas crear y sus respectivos vertices.<br>Los vertices son representados de forma numerica, de esta forma si seleccionas tres nodos seran expresados como 1,2,3 y los vertices
-                deberan ser ingresados de la siguiente forma:<br>Supongamos que etcetcetc</p>
+            <p id="text-info">Para agregar un grafo debes indicar si es dirigido o no, sin importar el orden de ingreso, uno puede asociar el nodo [1] con [2] separandolo con una "," y a su vez separando las distintas conexiones con ";"<br>
+                ejemplo para [1] conectado a [2], [2] conectado a [3] y [4] conectado a si mismo <br>
+                <strong>1,2;2,3;4,4</strong>
         </div>
     </div>
 
@@ -31,21 +32,28 @@
                                     <legend class="border-bottom mb-4">Formulario v0.1 </legend>
         
                                     <div class="form-group">
-                                    {{form.node.label(class="form-control-label")}}
-        
-                                    <!-- Validador inicio -->
-        
-                                    {%if form.node.errors %}
-                                    {{form.node(class="form-control form-control-lg is-invalid")}}
-        
-                                    <div class="invalid-feedback">
-                                        {% for errors in form.node.errors %}
-                                        <span>{{error}}</span>
-                                        {%endfor%}
-                                    {% else %}
-                                    {{form.node(class="form-control form-control-lg")}}                  
-                                    {% endif %}
+                                        <div class="form-check">
+                                            {{ form.check(value='n') }}
+                                            <label class="form-check-label">¿Es un grafo dirigido?</label>
+                                          </div>
                                     </div>
+                                    
+                                    <div class="form-group">
+                                        {{form.edge.label(class="form-control-label")}}
+            
+                                        <!-- Validador inicio -->
+            
+                                        {%if form.edge.errors %}
+                                        {{form.edge(class="form-control form-control-lg is-invalid")}}
+            
+                                        <div class="invalid-feedback">
+                                            {% for errors in form.edge.errors %}
+                                            <span>{{error}}</span>
+                                            {%endfor%}
+                                        {% else %}
+                                        {{form.edge(class="form-control form-control-lg")}}                  
+                                        {% endif %}
+                                        </div>
         
                                     <!-- validador termino -->
                                     </fieldset>
