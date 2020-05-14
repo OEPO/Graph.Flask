@@ -1,8 +1,4 @@
 # Graph.Flask
-input ejemplo grafo dirigido: 
-```bash
-1,2;2,3;3,1
-```
 a partir de eso generar una imagen.
 
 ## Librerias
